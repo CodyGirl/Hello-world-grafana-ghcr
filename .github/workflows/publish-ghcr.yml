@@ -11,5 +11,5 @@ jobs:
       - name: Build and push the Image
         run: |
           docker login --username CodyGirl --password ${{ secrets.GHCR_PAT }} ghcr.io
-          docker build . --tag ghcr.io/CodyGirl/hellow-world-grafana-ghcr:latest
+          docker build . --tag ghcr.io/codygirl/hello-world-grafana-ghcr:latest
           docker push ghcr.io/CodyGirl/hellow-world-grafana-ghcr:latest
