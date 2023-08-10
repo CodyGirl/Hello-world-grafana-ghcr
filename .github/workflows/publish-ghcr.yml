@@ -12,4 +12,4 @@ jobs:
         run: |
           docker login --username CodyGirl --password ${{ secrets.GHCR_PAT }} ghcr.io
           docker build . --tag ghcr.io/codygirl/hello-world-grafana-ghcr:latest
-          docker push ghcr.io/codygirl/hellow-world-grafana-ghcr:latest
+          docker push ghcr.io/codygirl/hello-world-grafana-ghcr:latest
