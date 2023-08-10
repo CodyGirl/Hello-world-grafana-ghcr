@@ -1,0 +1,15 @@
+name: GHCR hello world for grafana dashboard
+
+on:
+  push
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and push the Image
+        run: |
+          docker login --username CodyGirl --password ${{ GHCR_PAT }} ghcr.io
+          docker build . --tag ghcr.io/CodyGirl/hellow-world-grafana-ghcr:latest
+          docker push ghcr.io/CodyGirl/hellow-world-grafana-ghcr:latest
